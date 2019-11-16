@@ -126,7 +126,7 @@ stepsInterval2=aggregate(steps~interval+day,df1,mean)
 library(ggplot2)
 
 g <- ggplot(stepsInterval2, aes(x = steps, y = interval))
-g + geom_line(aes(col=factor(stepsInterval2$day)))
+g <- g + geom_line(aes(col=factor(stepsInterval2$day)))
 
 g
 
